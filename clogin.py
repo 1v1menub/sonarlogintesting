@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:robior123@localhost/login'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config['WTF_CSRF_ENABLED'] = True
 app.secret_key = 'secret string'
 
 db = SQLAlchemy(app)
